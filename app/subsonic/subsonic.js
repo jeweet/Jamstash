@@ -668,7 +668,8 @@ angular.module('jamstash.subsonic.controller', [
     if ($location.path() == "/playlists") {
         $scope.showPlaylist = true;
     } else {
-        $scope.openDefaultSection();
+        $rootScope.showIndex = true;
+ /*       $scope.openDefaultSection();  */
     }
     if ($routeParams.artistId && $routeParams.albumId) {
         $scope.getAlbumByTag($routeParams.albumId);

@@ -179,13 +179,13 @@ angular.module('JamStash')
         if (e.target.tagName.toUpperCase() != 'INPUT') {
             var unicode = e.charCode ? e.charCode : e.keyCode;
             if (globals.settings.Debug) { console.log('Keycode Triggered: ' + unicode); }
-            if (unicode == 49) { // 1
+            if (unicode == 52) { // 4
                 $('#action_Queue').click();
-            } else if (unicode == 50) {
+            } else if (unicode == 49) {
                 $('#action_Library').click();
+            } else if (unicode == 50) {
+                $('#action_Playlists').click();
             } else if (unicode == 51) {
-                $('#action_Archive').click();
-            } else if (unicode == 52) {
                 $('#action_Settings').click();
             } else if (unicode == 53) {
             } else if (unicode == 54) { // 6

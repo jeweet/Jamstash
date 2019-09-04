@@ -21,6 +21,10 @@
         	visibility: hidden;
         	display: none;   
 	}
+        #action_Search {
+                visibility: hidden;
+                display: none;   
+        }
 	#nav {
                 top: 3px;
 		border-bottom: 1px solid #D5D5D5;
@@ -99,9 +103,10 @@
 }
 @media only screen and (max-width: 600px) {
 	.smcolumn {
-		width: 100%;
+		width: 75%;
 		border-bottom; none;
 		min-width: 292px;
+                max-width: 330px;
 		top: 41px;
 		margin-bottom: -122px;
 	}
@@ -122,4 +127,7 @@
         #action_ToggleArtists {
                 display: initial;
         }
+        ul.simplelist li{
+		padding: 8px 10px;
+	}
 }

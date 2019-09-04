@@ -21,7 +21,17 @@ span.apiversion
 
 #content
 {
-    background: #333;
+    background: #3e3e3e;
+}
+#container 
+{
+   scrollbar-color: #1D1D1D #323232;
+}
+::-webkit-scrollbar-track {
+    background: #323232!important;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1D1D1D!important;
 }
 .lgsection
 {
@@ -50,10 +60,18 @@ span.apiversion
 }
 .leftsubsection {
 }
+#nav a svg
+{
+    fill: #b9b9b9;
+}
+#nav a.active svg
+{
+    fill: #ffd31c;
+}
 #nav a
 {
     color: #7C7C7C;
-	background: #272727;
+    background: #272727;
     border: 1px solid #232323;
     border-bottom: none;
 }
@@ -67,14 +85,14 @@ span.apiversion
 {
     color: #545454;
     background: #323232;
-	border: 1px solid #1D1D1D;
-	border-bottom: none;
+    border: 1px solid #1D1D1D;
+    border-bottom: none;
 }
 #nav a.active:hover
 {
     color: #545454;
     border: 1px solid #1D1D1D;
-	border-bottom: none;
+    border-bottom: none;
 }
 #SideBar
 {
@@ -112,9 +130,6 @@ span.apiversion
     border-bottom: 1px solid #1a1a1a;
 }
 #playercontainer {
-    background: #323232;
-}
-#globalactions a.button {
     background: #323232;
 }
 .vertshade {
@@ -304,7 +319,6 @@ ul.preferences li em
     color: #f2f2f2;
 }
 .form {
-    border: 1px solid #1A1A1A;
     background: transparent;
     overflow: auto;
     float: left;
@@ -386,18 +400,65 @@ label
 #QueuePreview .queueactions {
     border-right: 1px solid #000000;
 }
-select.folders {
-    background: #232323;
-    color: #fff; /*color: #d6d469;*/
-    border: 0px;
+#action_ToggleArtists svg {
+    fill: #b9b9b9;
 }
 #action_RefreshArtists {
-    background: #232323;
+    background: transparent;
+    border: 1px solid #1A1A1A;
+}
+#action_RefreshArtists svg {
+   fill: #939393;
+}
+#action_RefreshArtists:hover {
+    color: #939393;
+    -moz-box-shadow: 0 2px 0 rgba(242, 242, 242, 0.2)
+    -webkit-box-shadow:0 2px 5px rgba(242, 242, 242, 0.2);
+    box-shadow: 0 1px 2px rgba(242, 242, 242, 0.15);
+    border-color: #5a5a5a;
+}
+input:hover {
+    color: #939393;
+    -moz-box-shadow: 0 2px 0 rgba(242, 242, 242, 0.2)
+    -webkit-box-shadow:0 2px 5px rgba(242, 242, 242, 0.2);
+    box-shadow: 0 1px 2px rgba(242, 242, 242, 0.15);
+    border-color: #5a5a5a;
+}
+input {
+    background: #323232;
+    color: #fff; /*color: #d6d469;*/
+    border: 1px solid #1A1A1A;
+}
+input#Search:hover {
+    color: #939393;
+    -moz-box-shadow: 0 2px 0 rgba(242, 242, 242, 0.2)
+    -webkit-box-shadow:0 2px 5px rgba(242, 242, 242, 0.2);
+    box-shadow: 0 1px 2px rgba(242, 242, 242, 0.15);
+    border-color: #5a5a5a;
 }
 input#Search {
     background: #323232;
     color: #fff; /*color: #d6d469;*/
-    border: 1px solid #171717!important;
+    border: 1px solid #1A1A1A;
+}
+select:hover {
+    color: #939393;
+    -moz-box-shadow: 0 2px 0 rgba(242, 242, 242, 0.2)
+    -webkit-box-shadow:0 2px 5px rgba(242, 242, 242, 0.2);
+    box-shadow: 0 1px 2px rgba(242, 242, 242, 0.15);
+    border-color: #5a5a5a;
+}
+select {
+    background: #323232;
+    color: #939393;
+    border: 1px solid #171717;
+}
+select#SearchType:hover {
+    color: #939393;
+    -moz-box-shadow: 0 2px 0 rgba(242, 242, 242, 0.2)
+    -webkit-box-shadow:0 2px 5px rgba(242, 242, 242, 0.2);
+    box-shadow: 0 1px 2px rgba(242, 242, 242, 0.15);
+    border-color: #5a5a5a;
 }
 select#SearchType {
     background: #323232;
@@ -407,11 +468,6 @@ select#SearchType {
 select#SelectedAlbumSort {
     background: #323232;
     color: #5b5b4e;
-}
-select.large {
-    background: #232323;
-    color: #fff;
-    border: 0px;
 }
 
 /* jQuery Splitter Style */

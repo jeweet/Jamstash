@@ -2,13 +2,21 @@
 <div id="tab1" class="tabcontent">
     <div id="tabLibrary">
         <div class="actions floatleft">
-            <a href="" class="button" id="action_ToggleArtists" ng-click="toggleArtists()" title="Toggle Artists"><img src="images/hamburger.png" width="15px" /></a>
+            <a href="" class="hover" id="action_ToggleArtists" ng-click="toggleArtists()" title="Toggle Artists">
+		<svg viewBox="0 0 20 20">
+    			<path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+		</svg>
+	    </a>
         </div>
         <div id="search">
             <input type="text" id="Search" name="Search" class="medium" title="Wildcards (*) supported" placeholder="Search..." ng-model="searching.query" ng-enter="search(searching.query, searching.typeId)"/>
             <select id="SearchType" name="SearchType" ng-model="searching.typeId" ng-options="o.id as o.name for o in searching.types"></select>
-            <a href="" class="button" id="action_Search" title="Search" ng-click="search(searching.query, searching.typeId)"><img class="pad" src="images/magnifying_glass_alt_12x12.png" /></a>
         </div>
+            <a href="" class="button" id="action_Search" title="Search" ng-click="search(searching.query, searching.typeId)">
+           	<svg viewBox="0 0 20 20">
+    			<path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+		</svg>
+            </a>
         <div class="subactions">
             <div class="floatleft" ng-show="selectedPlaylist !== null">
                 <label>Playlist Actions</label>
@@ -35,12 +43,11 @@
 <!--
 <div class="blurred_overlay">
     <div class="artist_backdrop"></div>
-        <div class="artist_image"><img src="https://lastfm-img2.akamaized.net/i/u/770x0/e7090eb6d05349ae8e0932264910d875.jpg#e7090eb6d05349ae8e0932264910d875">
-         <div class="artist_name">Pink Floyd</div>
+        <div class="artist_image"><img ng-src="{{o.coverartthumb}}" src="https://lastfm-img2.akamaized.net/i/u/770x0/e7090eb6d05349ae8e0932264910d875.jpg#e7090eb6d05349ae8e0932264910d875">
+         <div class="artist_name">Artist Name Here {{a.id}}</div>
      </div>
-</div> -->
-
-                  
+</div>
+-->              
 
                 <ul class="actionlist">
                     <li>
@@ -61,7 +68,7 @@
                                 <a class="hover" href="" title="Star" ng-class="{'favorite': o.starred, 'rate': !o.starred}" ng-click="toggleStar(o)" stop-event="click"></a>
                                 <a class="info hover" href="" title="{{'Created: ' + o.date}}"></a>
                             </div>
-                            <div class="albumart"><img ng-src="{{o.coverartthumb}}" src="images/albumdefault_160.jpg"></div>
+                            <div class="albumart"><img ng-src="{{o.coverartthumb}}" src="images/empty.png"></div>
                             <div class="albuminfo">
                                 <div class="title" title="{{o.name}}" ng-bind-html="o.name"></div>
                                 <div class="artist" title="{{o.artist}}"><a href="" id="{{o.parentid}}" ng-click="getDirectory('display', o.parentid, o.artist, 'forward')" stop-event="click" ng-bind-html="o.artist"></a></div>
@@ -69,7 +76,7 @@
                             <div class="clear"></div>
                         </li>
                         <li class="album" ng-switch-when="bytag" id="{{o.id}}" ng-class="{'selected': selectedAlbum == o.id, 'albumgrid': settings.DefaultLibraryLayout.id == 'grid'}" ng-click="getAlbumByTag(o.id)">
-                            <div class="albumart"><img ng-src="{{o.coverartthumb}}" src="images/albumdefault_160.jpg"></div>
+                            <div class="albumart"><img ng-src="{{o.coverartthumb}}" src="images/empty.png"></div>
                             <div class="albuminfo">
                                 <div class="title" title="{{o.name}}" ng-bind-html="o.name"></div>
                                 <div class="artist" title="{{o.artist}}"><a href="" ng-click="getArtistByTag(o.artistId)" stop-event="click" ng-bind-html="o.artist"></a></div>
@@ -85,7 +92,11 @@
         <div id="left-component" class="smcolumn noselect" tabindex="0">
             <div class="clear"></div>
             <div id="IndexContainer" class="leftsubsection" ng-show="showIndex">
-          <a href="" class="button" id="action_RefreshArtists" title="Refresh List" ng-click="refreshArtists()"><img class="pad" src="images/reload_9x11.png" /></a>
+          	<a href="" class="button" id="action_RefreshArtists" title="Refresh List" ng-click="refreshArtists()">
+			<svg viewBox="0 0 20 20">
+    				<path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" />
+			</svg>
+	  	</a>
                 <select id="MusicFolders" class="folders" ng-model="SelectedMusicFolder" ng-options="o.name for o in MusicFolders track by o.id">
                     <option value="">All Folders</option>
                 </select>
