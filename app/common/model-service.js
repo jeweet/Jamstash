@@ -97,8 +97,8 @@ angular.module('jamstash.model', ['jamstash.utils'])
             coverartthumb = globals.BaseURL() + '/getCoverArt.view?' + globals.BaseParams() + '&size=30&id=' + song.coverArt;
             coverartfull = globals.BaseURL() + '/getCoverArt.view?' + globals.BaseParams() + '&id=' + song.coverArt;
         } else {
-            coverartthumb = 'images/albumdefault_60.jpg';
-            coverartfull = 'images/albumdefault_160.jpg';
+            coverartthumb = 'images/empty.png';
+            coverartfull = 'images/empty.png';
         }
         if (typeof song.description == 'undefined') { description = ''; } else { description = song.description; }
         if (typeof song.artist == 'undefined') { artist = '&nbsp;'; } else { artist = song.artist.toString(); }

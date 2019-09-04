@@ -358,8 +358,9 @@ angular.module('jamstash.subsonic.controller', [
                     });
                 }
                 $scope.selectedAutoAlbum = null;
-                $scope.selectedArtist = null;
+                $scope.selectedArtist = name;
                 $scope.selectedAlbum = id;
+                $scope.selectedAlbumCoverArtURL = globals.BaseURL() + '/getCoverArt.view?' + globals.BaseParams() + '&id=' + id;
                 $scope.selectedAutoPlaylist = null;
                 $scope.selectedPlaylist = null;
                 if ($scope.SelectedAlbumSort.id !== 'default') {

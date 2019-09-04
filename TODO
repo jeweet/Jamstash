@@ -12,6 +12,7 @@ fix ul.mainlist li.selected background-color for artists
 fix scrollbar is behind player - use custom made scrollbars?
 fix hide sidebar when artist is selected on mobile device
 fix align search fields in both browsers
+fix queue error on adding multiple times the same song.
 
 new login screen with user / pass & possible pre-defined server
 new redo settings screen - be responsive

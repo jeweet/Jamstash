@@ -35,20 +35,11 @@
             </div>
             <a href="" class="button" id="action_NewPlaylist" title="New Playlist" ng-click="newPlaylist()">+</a>
         </div>
-        <div id="SubsonicAlbums" class="lgsection" split>
+        <div id="{{selectedAlbum}}" class="subsonicalbums lgsection" split>
+
             <!-- Album -->
             <div id="right-component" class="lgcolumn" ng-class="{'lgcolumn_expanded' : !$rootScope.settings.ShowQueue}">
-
-
-<!--
-<div class="blurred_overlay">
-    <div class="artist_backdrop"></div>
-        <div class="artist_image"><img ng-src="{{o.coverartthumb}}" src="https://lastfm-img2.akamaized.net/i/u/770x0/e7090eb6d05349ae8e0932264910d875.jpg#e7090eb6d05349ae8e0932264910d875">
-         <div class="artist_name">Artist Name Here {{a.id}}</div>
-     </div>
-</div>
--->              
-
+                <div class="a_image"><img src="images/empty.png" ng-src="{{selectedAlbumCoverArtURL}}"></div><div class="a_title">{{selectedArtist}}</div>
                 <ul class="actionlist">
                     <li>
                         <form class="form">

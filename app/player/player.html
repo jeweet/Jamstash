@@ -1,5 +1,7 @@
  <div id="player">
-  <div id="blurwrapper" style="background-image: url(' {{getPlayingSong().coverartthumb}} ')"></div>
+  <div id="blurwrapper">
+         <img ng-src="{{getPlayingSong().coverartthumb}}" src="images/albumdefault_60.jpg" height="100%" width="100%" />
+  </div>
     <div id="playercontainer">
         <div id="playerleft" class="floatleft">
             <div class="playeractions floatleft">

@@ -200,7 +200,7 @@ span.apiversion
 }
 #sslogo:hover
 {
-    background: url('../images/subsonic_dn_36.png') no-repeat 5px 2px;
+    background: url('../images/subsonic_logo.png') no-repeat 5px 2px;
 }
 #content
 {
@@ -274,7 +274,7 @@ span.apiversion
     border-top: 1px solid #cbcbcb;
     border-bottom: 1px solid #cbcbcb;
     width:  100%;
-    overflow: hidden;
+    overflow: auto;
     position: fixed;
     top: 40px;
 	/*
@@ -1168,8 +1168,9 @@ ul.songlist li:hover
     overflow: hidden;
 }
 #blurwrapper{
-    background-repeat: no-repeat!important;
-    background-size: cover!important;
+/*  background-repeat: no-repeat!important;
+    background-position: 0 50%;
+    background-size: cover!important;*/
     background: #fff;
     width: 100%;
     height: 200px;
@@ -1181,7 +1182,6 @@ ul.songlist li:hover
     -ms-filter: blur(5px);
     -o-filter: blur(5px);
     filter: blur(5px);
-    background-position: 0 50%;
     margin-bottom: -10px;
     padding: 10px;
 }
@@ -1827,42 +1827,16 @@ legend
    width: 16px;
    fill: #5b5b4e;
 }
-
-
-
-/** Under Construction ***/
-.artist_backdrop{
-    background-image: url('https://lastfm-img2.akamaized.net/i/u/770x0/e7090eb6d05349ae8e0932264910d875.jpg#e7090eb6d05349ae8e0932264910d875');
-    background-size: cover;
-    height: 200px;
-    overflow: hidden;
-    margin: -170px;
-    -webkit-filter: blur(25px);
-    -moz-filter: blur(25px);
-    -ms-filter: blur(25px);
-    -o-filter: blur(25px);
-    filter: blur(25px);
-    background-position: 0 40%;
-}
-.blurred_overlay{
-   background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgba(255,255,255,0.024229760263480338) 0%, transparent 76%);
-   height: 130px;
-   z-index: 7;
-   overflow: hidden;
-}
-.artist_image{
-   z-index: 9;
-   margin-top: 155px;
-   text-align: left;
-}
-.artist_image img {
-   border-radius: 50%;
-   margin-left: 30px;
+.a_image {
    height: 100px;
    float: left;
+   margin: 20px;
 }
-.artist_name {
-   margin-left: 160px;
+.a_image img {
+   height: 100px;
+   border-radius: 10px;
+}
+.a_title {
+   margin: 20px;
    font-size: 40px;
-   padding-top: 25px;
 }
