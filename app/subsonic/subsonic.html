@@ -25,7 +25,11 @@
                 <a href="" class="button" id="action_RemoveSongs" title="Remove selected song(s) from playlist" ng-click="songsRemoveSelected()">Remove Song(s)</a>
                 |&nbsp;
             </div>
-            <a href="" class="button" id="action_PlayAlbum" title="Play Album" ng-click="playAll()"><img src="images/play_gl_6x8.png"></a>
+            <a href="" class="button" id="action_PlayAlbum" title="Play Album" ng-click="playAll()">
+                <svg viewBox="0 0 20 20">
+                        <path d="M8.5,8.64L13.77,12L8.5,15.36V8.64M6.5,5V19L17.5,12" />
+                </svg>
+            </a>
             <a href="" class="button" id="action_SelectAll" title="Select All" ng-click="selectAll()">All</a>
             <a href="" class="button" id="action_SelectNone" title="Select None" ng-click="selectNone()">None</a>
             <a href="" class="button" id="action_AddToQueue" title="Add To Queue" ng-click="addSelectedSongsToQueue()">+ Queue</a>
@@ -52,14 +56,43 @@
                 <ul class="simplelist songlist noselect">
                     <div class="" ng-repeat="o in album" ng-switch on="o.type">
                         <li class="album" ng-switch-when="byfolder" id="{{o.id}}" ng-class="{'selected': selectedAlbum == o.id, 'albumgrid': settings.DefaultLibraryLayout.id == 'grid'}" ng-click="getDirectory('display', o.id, o.name, 'forward')" parentid="{{o.parentid}}">
+                          
+
+
+
+                            <div class="albumart">
+                               <div class="artwrapper"><img ng-src="{{o.coverartthumb}}" src="images/empty.png"></div>
+
                             <div class="itemactions">
-                                <a class="add hover" href="" title="Add To Play Queue" ng-click="getDirectory('add', o.id, o.name, 'forward')" stop-event="click"></a>
-                                <a class="play hover" href="" title="Play" ng-click="getDirectory('play', o.id, o.name, 'forward')" stop-event="click"></a>
-                                <a class="download hover" href="" ng-click="download(o.id)" title="Download" stop-event="click"></a>
-                                <a class="hover" href="" title="Star" ng-class="{'favorite': o.starred, 'rate': !o.starred}" ng-click="toggleStar(o)" stop-event="click"></a>
-                                <a class="info hover" href="" title="{{'Created: ' + o.date}}"></a>
+                                <a class="add hover" href="" title="Add To Play Queue" ng-click="getDirectory('add', o.id, o.name, 'forward')" stop-event="click">
+                                        <svg viewBox="0 0 35 35">
+                                                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                </a>
+                                <a class="play hover" href="" title="Play" ng-click="getDirectory('play', o.id, o.name, 'forward')" stop-event="click">
+                                        <svg viewBox="0 0 35 35">
+                                                <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                        </svg>
+                                </a>
+                                <a class="download hover" href="" ng-click="download(o.id)" title="Download" stop-event="click">
+                                        <svg viewBox="0 0 35 35">
+                                                <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                                        </svg>
+                                </a>
+                                <a class="hover" href="" title="Star" ng-class="{'favorite': o.starred, 'rate': !o.starred}" ng-click="toggleStar(o)" stop-event="click">
+                                        <svg viewBox="0 0 35 35">
+                                                <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                                        </svg>
+                                </a>
+                                <a class="info hover" href="" title="{{'Created: ' + o.date}}">
+                                        <svg viewBox="0 0 35 35">
+                                                <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+                                        </svg>
+                                </a>
                             </div>
-                            <div class="albumart"><img ng-src="{{o.coverartthumb}}" src="images/empty.png"></div>
+
+                            </div>
+
                             <div class="albuminfo">
                                 <div class="title" title="{{o.name}}" ng-bind-html="o.name"></div>
                                 <div class="artist" title="{{o.artist}}"><a href="" id="{{o.parentid}}" ng-click="getDirectory('display', o.parentid, o.artist, 'forward')" stop-event="click" ng-bind-html="o.artist"></a></div>

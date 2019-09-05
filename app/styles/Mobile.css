@@ -63,7 +63,7 @@
 		height: 160px;
 	}
 	ul.songlist .albumgrid .itemactions {
-		width: auto;
+		width: 125px;
 	}
 	ul.songlist .albumgrid .itemactions a {
 		padding: 5px;
@@ -80,6 +80,7 @@
 	}
 	ul.songlist .albumgrid .albuminfo {
 		width: 142px;
+                margin: 145px 10px;
 	}
 	ul.songlist .album a:hover {
 		background-position: center center;

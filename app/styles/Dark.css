@@ -268,7 +268,7 @@ ul.songlist li.album
 }
 ul.songlist li.album .albumart img
 {
-    border: 1px solid #232323;
+  /*  border: 1px solid #232323;*/
 }
 ul.songlist .albumgrid .title
 {
@@ -469,6 +469,13 @@ select#SelectedAlbumSort {
     background: #323232;
     color: #5b5b4e;
 }
+ul.songlist .album .itemactions a svg {
+    fill: #ffffff;
+}
+ul.songlist .album a.favorite svg {
+    fill: #f9d713;
+}
+
 
 /* jQuery Splitter Style */
 .ui-state-default { background-color: #252525; }

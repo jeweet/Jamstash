@@ -34,7 +34,7 @@
                 <span ng-attr-id="{{ 'msg_' + $index }}" class="message" ng-repeat="item in Messages track by $index" ng-bind-html="item"></span>
             </div>
             <div id="loading" ng-show="loading.isLoading"></div>
-            <a id="sslogo" target="_blank" ng-show="settings.Server" ng-href="{{settings.Server}}/admin" title="{{settings.Server}}"></a>
+            <a class="sslogo" id="sslogo" target="_blank" ng-show="settings.Server" ng-href="{{settings.Server}}/admin" title="{{settings.Server}}"></a>
             <div id="nav">
                 <ul class="tabs">
                     <li><a href="#/library" class="first tab" id="action_Library" title="Library" ng-class="{'active': isActive('/library')}">

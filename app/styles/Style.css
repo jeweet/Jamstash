@@ -188,19 +188,20 @@ span.apiversion
     height: 20px;
     opacity: .8;
 }
-#sslogo
+.sslogo
 {
     position: absolute;
     top: -1px;
     right: 7px;
     width: 54px;
-    height: 36px;
-    background: url('../images/subsonic_logo.png') no-repeat 5px 3px;
+    height: 40px;
+    background-size: cover;
+    background: url(../images/subsonic-icon.svg) no-repeat -6px -11px;
     cursor: pointer;
 }
-#sslogo:hover
+.sslogo:hover
 {
-    background: url('../images/subsonic_logo.png') no-repeat 5px 2px;
+background: url(../images/subsonic-icon.svg) no-repeat -6px -10px;
 }
 #content
 {
@@ -244,6 +245,7 @@ span.apiversion
 }
 .lgcolumn
 {
+    position: relative;
     scrollbar-width: thin;
     height: 100%;
     overflow-y: auto;
@@ -464,6 +466,7 @@ ul.simplelist li
 }
 ul.simplelist .item .itemactions
 {
+    top: 0px;
     float: left;
     margin: 0 5px;
 }
@@ -626,8 +629,8 @@ ul.songlist .album a
     color: #7EA8D5;
     text-decoration: none;
     overflow: hidden;
-	white-space: nowrap;
-	font-size: 11px;
+    white-space: nowrap;
+    font-size: 11px;
 }
 ul.songlist .album a:hover
 {
@@ -645,18 +648,23 @@ ul.songlist .album .description
 }
 ul.songlist .album .itemactions
 {
-    width: 100px;
+    width: 130px;
     padding: 0;
-    margin: 4px 0 0 2px;
-    float: left;
+    margin: -35px 0 0 2px;
+    position: absolute;
+    right: 20px;
 }
 ul.songlist .album .itemactions a
 {
     float: left;
-    width: 20px;
+    width: 25px;
     height: 56px;
     display: block;
     margin: 0;
+}
+ul.songlist .album .itemactions a svg
+{
+    fill: #5b5b4e;
 }
 ul.songlist .album .albumart
 {
@@ -688,15 +696,12 @@ ul.songlist .album .details
 }
 ul.songlist .album a.play
 {
-    background: url('../images/play_gl_6x8.png') no-repeat 7px center;
 }
 ul.songlist .album a.add
 {
-    background: url('../images/plus_gl_8x8.png') no-repeat 6px center;
 }
 ul.songlist .album a.download
 {
-    background: url('../images/download_gl_9x12.png') no-repeat 5px center;
 }
 ul.songlist .album a.remove
 {
@@ -704,15 +709,16 @@ ul.songlist .album a.remove
 }
 ul.songlist .album a.rate
 {
-	background: url('../images/star_lgo_12x12.png') 4px center no-repeat;
 }
 ul.songlist .album a.favorite
 {
-	background: url('../images/star_yo_12x12.png') 4px center no-repeat;
+}
+ul.songlist .album a.favorite svg
+{
+   fill: #f9d713!important;
 }
 ul.songlist .album a.info
 {
-    background: url('../images/info_gl_4x8.png') no-repeat 7px center;
 }
 ul.songlist .albumgrid
 {
@@ -745,10 +751,8 @@ ul.songlist .albumgrid .albumart img {
     margin: 3px 0 0 18px;
     padding: 0px;
     box-shadow: 3px 4px 1px rgba(0, 0, 0, 0.2);
-    /* REMOVED:  Slows scroll performance of albums;
-    -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, transparent), to(rgba(255,255,255,0.2)));
-    */
     border-radius: 10px;
+    z-index: 98;
 }
 ul.songlist li:hover .albumgrid  .albumart img {
 	border: 4px solid #ccc;
@@ -759,10 +763,15 @@ ul.songlist li:hover .albumgrid  .albumart img {
 ul.songlist .albumgrid .albuminfo
 {
     float: left;
-    margin: 0 10px;
+    margin: 180px 10px;
     overflow: hidden;
     width: 175px;
-	text-align: center;
+    text-align: center;
+}
+ul.songlist .albumgrid .albumart
+{
+    position: absolute;
+    margin-top: 10px;
 }
 ul.songlist li:hover .albumgrid  .albuminfo {
 	position: relative;
@@ -770,12 +779,38 @@ ul.songlist li:hover .albumgrid  .albuminfo {
 }
 ul.songlist .albumgrid .itemactions
 {
-    margin: 0 auto;
-    float: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 160px;
+    height: 40px;
+    background-color: #000000;
+    opacity: 0.7;
+    margin: 2px 0 0 18px;
+    display: none;
+    z-index: 99;
+    border-radius: 10px 10px 0 0;
+}
+ul.songlist .albumgrid .itemactions svg{
+   fill: #ffffff!important;
+   height: 30px;
+   width: 30px;
+}
+
+ul.songlist .albumgrid .artwrapper 
+{
+    position: absolute;
+}
+ul.songlist li.albumgrid:hover .itemactions{
+    display: block;
 }
 ul.songlist .albumgrid .itemactions a
 {
-    height: 20px
+    height: 30px;
+    width: 26px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 5px;
 }
 ul.songlist .albumgrid .itemactions a:hover {
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
@@ -813,7 +848,11 @@ ul.songlist .row img
 }
 ul.songlist .row .itemactions
 {
-    /*width: 15%;*/
+    float: right;
+    padding: 6px 10px 0 15px;
+}
+ul.songlist .row .itemactions_queue
+{
     float: left;
     padding: 6px 10px 0 15px;
 }
@@ -974,12 +1013,13 @@ ul.songlist li:hover
     float: right;
     height: 30px;
     width: 650px;
-    margin: 6px 65px 0 0;
+    margin: 5px 65px 0 0;
 }
 .subactions > a.button {
     padding:  6px 5px;
     min-width: 20px;
     text-align: center;
+    top: -6px;
 }
 #globalactions
 {
@@ -1011,8 +1051,22 @@ ul.songlist li:hover
     font: 400 11px Helvetica,Arial,sans-serif;
     padding: 3px 8px 3px 8px;
     margin: 5px;
+    height: 22px;
 }
 #action_Search svg
+{
+    fill: #6d6d6d;
+    width: 19px;
+    height: 19px;
+}
+#action_PlayAlbum
+{
+    height: 22px;
+    font: 400 11px Helvetica,Arial,sans-serif;
+    padding: 3px 6px 3px 6px;
+    top: 0px;
+}
+#action_PlayAlbum svg
 {
     fill: #6d6d6d;
     width: 19px;
@@ -1182,8 +1236,8 @@ ul.songlist li:hover
     -ms-filter: blur(5px);
     -o-filter: blur(5px);
     filter: blur(5px);
-    margin-bottom: -10px;
-    padding: 10px;
+/*    margin-bottom: -10px;
+    padding: 10px; */
 }
 #playercontainer {
     z-index: 3;
@@ -1531,6 +1585,7 @@ a.button {
     color: #6e6e6e;
     font: 400 12px Helvetica, Arial, sans-serif;
     text-decoration: none;
+    height: 16px;
     padding: 6px 12px;
     position: relative;
     display: inline-block;
@@ -1740,6 +1795,10 @@ select#SelectedAlbumSort
     font-size: 12px;
     margin: 2px;
 }
+select#SelectedAlbumSort:hover 
+{
+    box-shadow: none;
+}
 select.folders
 {
     width: calc(100% - 47px);
@@ -1839,4 +1898,6 @@ legend
 .a_title {
    margin: 20px;
    font-size: 40px;
+   height: 100px;
+   overflow: hidden;
 }
