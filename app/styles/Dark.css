@@ -298,7 +298,7 @@ ul.songlist li.row td.album a:hover
     color: #fff; /*color: #d6d469;*/
     text-decoration: underline;
 }
-ul.songlist li:nth-child(odd)   { background-color: transparent; }
+ul.songlist li:nth-child(odd)   { background-color: #272727; }
 ul.songlist li:nth-child(even)  { background-color: transparent; }
 ul.songlist li.playing {
     background-color: #161616;
@@ -477,6 +477,10 @@ ul.songlist .album .itemactions a svg {
 }
 ul.songlist .album a.favorite svg {
     fill: #f9d713;
+}
+ul.songlist li.playing
+{
+    color: #ffffff;
 }
 
 
