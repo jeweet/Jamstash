@@ -1,17 +1,27 @@
 <li class="row song" ng-repeat="o in song" ng-click="toggleSelection(o)" ng-dblclick="playFrom($index)" ng-class="{'selected': o.selected, 'playing': o.playing}">
     <div class="itemactions">
-        <a class="add" href="" title="Add To Queue" ng-click="addSongToQueue(o)" stop-event="click"></a>
-        <!--<a class="remove" href="" title="Remove Song" ng-click="removeSongFromQueue(o)" stop-event="click"></a>-->
-        <a class="play" href="" title="Play this song" ng-click="playSong(o)" stop-event="click"></a>
-        <!--<a class="download" href="" title="Download Song" ng-click="download(o.id)"></a>-->
-        <a href="" title="Star" ng-class="{'favorite': o.starred, 'rate': !o.starred}" ng-click="toggleStar(o)" stop-event="click"></a>
+        <a class="add hover" href="" title="Add To Queue" ng-click="addSongToQueue(o)" stop-event="click">
+                <svg viewBox="0 0 35 35">
+                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                </svg>
+        </a>
+        <a class="play hover" href="" title="Play this song" ng-click="playSong(o)" stop-event="click">
+                <svg viewBox="0 0 35 35">
+                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                </svg>
+        </a>
+        <a href="" title="Star" ng-class="{'favorite': o.starred, 'rate': !o.starred}" ng-click="toggleStar(o)" stop-event="click">
+                <svg viewBox="0 0 35 35">
+                        <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                </svg>
+        </a>
         <div class="clear"></div>
     </div>
     <div class="track floatleft" ng-bind-html="o.track"></div>
     <div class="title floatleft" title="{{o.description}}" ng-bind-html="o.name"></div>
     <span class="artist floatleft" ng-bind-html="o.artist"></span>
-    <div ng-show="o.album>
-        <img ng-src="{{o.coverartfull}}">
+    <div ng-show="o.album">
+        <img ng-src="{{o.coverartfull}}" />
         <a ng-href="#/library/0/{{o.albumId}}" class="albumblock floatleft" stop-event="click" ng-bind-html="o.album" title="{{o.album}}"></a>
     </div>
     <div class="albumblock floatleft" ng-show="!o.album">&nbsp;</div>

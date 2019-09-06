@@ -192,7 +192,7 @@ span.apiversion
 {
     position: absolute;
     top: 6px;
-    right: 7px;
+    right: 0px;
     width: 54px;
     height: 40px;
     background-size: 50px!important;
@@ -653,6 +653,7 @@ ul.songlist .album .itemactions
     margin: -20px -20px 0 2px;
     position: absolute;
     right: 20px;
+    display: none;
 }
 ul.songlist .album .itemactions a
 {
@@ -663,6 +664,10 @@ ul.songlist .album .itemactions a
     margin: 0;
 }
 ul.songlist .album .itemactions a svg
+{
+    fill: #5b5b4e;
+}
+ul.songlist li .itemactions svg
 {
     fill: #5b5b4e;
 }
@@ -849,7 +854,12 @@ ul.songlist .row img
 ul.songlist .row .itemactions
 {
     float: right;
-    padding: 6px 10px 0 15px;
+    padding: 6px 0px 0 15px;
+    display: none;
+}
+ul.songlist .row:hover .itemactions
+{
+    display: initial;
 }
 ul.songlist .row .itemactions_queue
 {
@@ -901,39 +911,31 @@ ul.songlist .row .time
 }
 ul.songlist .row a.play
 {
-    background: url('../images/play_gl_6x8.png') no-repeat 7px center;
 }
 ul.songlist .row a.play:hover
 {
-    background: url('../images/play_6x8.png') no-repeat 7px center #DEECFB;
 }
 ul.songlist .row a.download
 {
-    background: url('../images/download_gl_9x12.png') no-repeat 5px center;
 }
 ul.songlist .row a.download:hover
 {
-    background: url('../images/download_gd_9x12.png') no-repeat 5px center #DEECFB;
 }
 ul.songlist .row a.add
 {
-    background: url('../images/plus_gl_8x8.png') no-repeat 6px center;
 }
 ul.songlist .row a.add:hover
 {
-    background: url('../images/plus_8x8.png') no-repeat 6px center #DEECFB;
 }
 ul.songlist .row a.rate
 {
-	background: url('../images/star_lgo_12x12.png') center 3px no-repeat;
 }
 ul.songlist .row a.rate:hover
 {
-    background: url('../images/star_lg_12x12.png') center 3px no-repeat;
 }
-ul.songlist .row a.favorite
+ul.songlist .row a.favorite svg
 {
-	background: url('../images/star_yo_12x12.png') center 3px no-repeat;
+   fill: #f9d713!important;
 }
 ul.songlist .row a.remove
 {
@@ -959,8 +961,9 @@ ul.songlist li.playing
 ul.songlist li.selected
 {
     background-color: #D4E2F1;
-    background-image: url('../images/check_8x7.png');
-    background-position: 10px 19px;
+    background-image: url('../images/sprite/check.svg');
+    background-size: 15px 15px;
+    background-position: 30px 12px;
     background-repeat: no-repeat;
 }
 ul.songlist li.selected:hover {
@@ -973,6 +976,10 @@ ul.songlist li.album {
 ul.songlist li:hover
 {
     background-color: #EEF4FA;
+}
+ul.songlist li:hover .itemactions
+{
+    display: initial;
 }
 .songpreview li {
     list-style-type: none;
@@ -1222,12 +1229,9 @@ ul.songlist li:hover
     overflow: hidden;
 }
 #blurwrapper{
-/*  background-repeat: no-repeat!important;
-    background-position: 0 50%;
-    background-size: cover!important;*/
     background: #fff;
     width: 100%;
-    height: 200px;
+    height: 100px;
     position: absolute;
     bottom: 0;
     z-index: -1;
@@ -1236,8 +1240,6 @@ ul.songlist li:hover
     -ms-filter: blur(5px);
     -o-filter: blur(5px);
     filter: blur(5px);
-/*    margin-bottom: -10px;
-    padding: 10px; */
 }
 #playercontainer {
     z-index: 3;
@@ -1346,7 +1348,7 @@ ul.songlist li:hover
 #songdetails
 {
     width: 322px;
-    margin: 6px;
+    margin: 5px;
     float: left;
     cursor: pointer;
     padding: 0;
@@ -1423,11 +1425,11 @@ ul.songlist li:hover
 #songdetails a.favorite
 {
     float: left;
-	height: 12px;
+    height: 12px;
     width: 12px;
     margin: 2px;
     display: block;
-	background: url('../images/star_yo_12x12.png') 0 center no-repeat;
+    background: url('../images/star_yo_12x12.png') 0 center no-repeat;
 }
 #songdetails a.mute
 {
@@ -1793,7 +1795,7 @@ select#SelectedAlbumSort
     text-align: center;
     text-align-last:center;
     font-size: 12px;
-    margin: 2px;
+    margin: 5px 0px 0px 0px;
 }
 select#SelectedAlbumSort:hover 
 {

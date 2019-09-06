@@ -469,6 +469,9 @@ select#SelectedAlbumSort {
     background: #323232;
     color: #5b5b4e;
 }
+ul.songlist li .itemactions a svg {
+    fill: #ffffff;
+}
 ul.songlist .album .itemactions a svg {
     fill: #ffffff;
 }

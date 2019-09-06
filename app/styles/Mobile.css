@@ -15,6 +15,10 @@
         #action_ToggleArtists {
                 display: initial;
         }
+        ul.songlist .album .itemactions {
+                display: initial;
+        }
+
 }
 @media only screen and (max-width: 840px) {
 	#search  {
@@ -48,9 +52,12 @@
 		margin-left: 0;
 	}
 	ul.songlist li {
-    	font-size: 12px;
-    	padding: 2px 4px;
+            	font-size: 12px;
+              	padding: 2px 4px;
 	}
+        ul.songlist .album .itemactions {
+                display: initial;
+        }
 	ul.songlist .row img {
 		display: none;
 	}

@@ -2,25 +2,23 @@ done artist and playlist as tabs - remove from smcolumn
 done folder playlists function first item is missing
 done mediaFolderID to select genre folder - supysonic bug
 done folder playlist function does not return playlist - supysonic bug
+done album artist large coverart above list / grid
 
-fix breadcrumbs - navigation & Artist - artist - artist bug
-fix login redirect to artists and show a start page
+fix breadcrumbs - navigation & Artist - artist - artist bug and show page in main div
+fix show a start page
 fix subsonic logo url - make configurable
 fix local storage icon in player fucks layout
 fix grid with mixed content
 fix ul.mainlist li.selected background-color for artists
-fix scrollbar is behind player - use custom made scrollbars?
+fix scrollbar is behind player
 fix hide sidebar when artist is selected on mobile device
-fix align search fields in both browsers
 fix queue error on adding multiple times the same song.
 
 fix svg icons in queue, song list, player controls and playlists.
-fix 
 
 new login screen with user / pass & possible pre-defined server
 new redo settings screen - be responsive
 new to top button in artists
-new albun large coverart above list
 
 future - artist info - similar artists - wait for supysonic api
 future - implement chat
