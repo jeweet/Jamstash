@@ -66,8 +66,12 @@
 		width: 125px;
 	}
 	ul.songlist .albumgrid .itemactions a {
-		padding: 5px;
 		background-position: center center;
+	    	height: 15px;
+    		width: 15px;
+    		text-align: center;
+    		margin-top: 5px;
+    		padding: 4px;
 	}
 	ul.songlist .albumgrid .albumart {
 		width: 150px;

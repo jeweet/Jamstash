@@ -191,17 +191,17 @@ span.apiversion
 .sslogo
 {
     position: absolute;
-    top: -1px;
+    top: 6px;
     right: 7px;
     width: 54px;
     height: 40px;
-    background-size: cover;
-    background: url(../images/subsonic-icon.svg) no-repeat -6px -11px;
+    background-size: 50px!important;
+    background: url('../images/subsonic-icon.png') no-repeat -6px -11px;
     cursor: pointer;
 }
 .sslogo:hover
 {
-background: url(../images/subsonic-icon.svg) no-repeat -6px -10px;
+background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
 }
 #content
 {
@@ -650,7 +650,7 @@ ul.songlist .album .itemactions
 {
     width: 130px;
     padding: 0;
-    margin: -35px 0 0 2px;
+    margin: -20px -20px 0 2px;
     position: absolute;
     right: 20px;
 }
@@ -1016,10 +1016,10 @@ ul.songlist li:hover
     margin: 5px 65px 0 0;
 }
 .subactions > a.button {
-    padding:  6px 5px;
+    padding:  8px 5px 4px 5px;
     min-width: 20px;
     text-align: center;
-    top: -6px;
+    top: -5px;
 }
 #globalactions
 {
@@ -1063,7 +1063,7 @@ ul.songlist li:hover
 {
     height: 22px;
     font: 400 11px Helvetica,Arial,sans-serif;
-    padding: 3px 6px 3px 6px;
+    padding: 3px 6px 3px 3px;
     top: 0px;
 }
 #action_PlayAlbum svg
@@ -1887,13 +1887,21 @@ legend
    fill: #5b5b4e;
 }
 .a_image {
-   height: 100px;
    float: left;
-   margin: 20px;
+   background: #e5e5e5;
+   width: 120px;
+   height: 120px;
+   border-radius: 10px;
+   text-align: center;
+   overflow: hidden;
+   margin: 20px 20px 0px 20px;
 }
 .a_image img {
-   height: 100px;
+   height: 120px;
    border-radius: 10px;
+   object-fit: cover;
+   max-width: 120px;
+   max-height: 120px;
 }
 .a_title {
    margin: 20px;
