@@ -193,8 +193,8 @@ span.apiversion
     position: absolute;
     top: 6px;
     right: 0px;
-    width: 54px;
-    height: 40px;
+    width: 50px;
+    height: 33px;
     background-size: 50px!important;
     background: url('../images/subsonic-icon.png') no-repeat -6px -11px;
     cursor: pointer;
@@ -866,6 +866,9 @@ ul.songlist .row .itemactions_queue
     float: left;
     padding: 6px 10px 0 15px;
 }
+.queue .icon-wrap {
+    fill: #6d6d6d;
+}
 ul.songlist .row .itemactions a
 {
     float: left;
@@ -944,24 +947,21 @@ ul.songlist .row a.remove
     display: block;
     float: left;
     margin: 0;
-    background: url('../images/minus_gl_8x2.png') no-repeat 6px center;
+    fill: #6d6d6d;
 }
 ul.songlist .row a.remove:hover
 {
-    background: url('../images/minus_8x2.png') no-repeat 6px center #DEECFB;
 }
 ul.songlist li:nth-child(odd) { background-color:#f7f7f7; }
 ul.songlist li:nth-child(even) { background-color:transparent; }
 ul.songlist li.playing
 {
-    background-image: url('../images/play_alt_gd_16x16.png');
-    background-repeat: no-repeat;
-    background-position: 6px center;
+    font-weight: 700;
+    color: #000000;
 }
 ul.songlist li.selected
 {
     background-color: #D4E2F1;
-    background-image: url('../images/sprite/check.svg');
     background-size: 15px 15px;
     background-position: 30px 12px;
     background-repeat: no-repeat;
@@ -971,7 +971,7 @@ ul.songlist li.selected:hover {
 }
 ul.songlist li.album {
     background-image: none;
-	background-color: transparent
+    background-color: transparent
 }
 ul.songlist li:hover
 {
@@ -980,6 +980,11 @@ ul.songlist li:hover
 ul.songlist li:hover .itemactions
 {
     display: initial;
+}
+.itemactions_queue svg {
+    height: 15px;
+    width: 15px;
+    fill: #6d6d6d;
 }
 .songpreview li {
     list-style-type: none;

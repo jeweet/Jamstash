@@ -18,6 +18,9 @@
         ul.songlist .album .itemactions {
                 display: initial;
         }
+        ul.songlist .row .itemactions {
+                display: initial;
+        }
 
 }
 @media only screen and (max-width: 840px) {
