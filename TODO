@@ -3,14 +3,14 @@ done folder playlists function first item is missing
 done mediaFolderID to select genre folder - supysonic bug
 done folder playlist function does not return playlist - supysonic bug
 done album artist large coverart above list / grid
+done local storage icon in player fucks layout
+done scrollbar is behind player
 
 fix breadcrumbs - navigation & Artist - artist - artist bug and show page in main div
 fix show a start page
 fix subsonic logo url - make configurable
-fix local storage icon in player fucks layout
 fix grid with mixed content
 fix ul.mainlist li.selected background-color for artists
-fix scrollbar is behind player
 fix hide sidebar when artist is selected on mobile device
 fix queue error on adding multiple times the same song.
 
@@ -23,4 +23,4 @@ new to top button in artists
 future - artist info - similar artists - wait for supysonic api
 future - implement chat
 
-rebrand to supystash
+rebrand to ??
