@@ -292,11 +292,15 @@ ul.songlist li td.album a:hover
     color: #fff; /*color: #d6d469;*/
     text-decoration: underline;
 }
-ul.songlist li:nth-child(odd)   { background-color: #2b2b2b; }
+ul.songlist li:nth-child(odd)   { background-color: #313030; }
 ul.songlist li:nth-child(even)  { background-color: transparent; }
-ul.songlist .ng-scope:nth-child(2n+1) li.album {
-    background-color: #2b2b2b;
-}
+
+ul.songlist .ng-scope:nth-child(odd) li.album { background-color: #313030 }
+ul.songlist .ng-scope:nth-child(even) li.album { background-color: transparent }
+
+ul.songlist .ng-scope:nth-child(odd) li.albumgrid { background-color: transparent }
+ul.songlist .ng-scope:nth-child(even) li.albumgrid { background-color: transparent }
+
 ul.songlist li.playing {
     background-color: #161616;
 }

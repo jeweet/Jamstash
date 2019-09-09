@@ -1,0 +1,15 @@
+{
+  "background_color": "grey",
+  "description": "Subsonic music player",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "images/subsonic-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "Jamstash",
+  "short_name": "Jamstash",
+  "start_url": "index.html"
+}

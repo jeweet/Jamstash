@@ -137,7 +137,11 @@
 		display: none;	
 	}
 	#globalactions {
+                margin: 15px 10px 0px 0px;
 	}
+        .audiojs {
+                margin: 0 50px 0 0;
+        }
 	#SettingsForm {
 	}
         #action_ToggleArtists {
