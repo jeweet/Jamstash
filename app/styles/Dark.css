@@ -260,7 +260,6 @@ ul.songlist li.albumgrid
 ul.songlist li.album
 {
     color: #f2f2f2;
-    border-bottom: 1px solid #272727;
 }
 ul.songlist li.albumgrid .albumart img
 {
@@ -271,7 +270,6 @@ ul.songlist .albumgrid .title
     color: #f2f2f2;
 }
 ul.songlist li.row {
-    border-bottom: 1px solid #232323;
 }
 ul.songlist li:hover
 {
@@ -294,10 +292,10 @@ ul.songlist li td.album a:hover
     color: #fff; /*color: #d6d469;*/
     text-decoration: underline;
 }
-ul.songlist li:nth-child(odd)   { background-color: #2b2929; }
+ul.songlist li:nth-child(odd)   { background-color: #2b2b2b; }
 ul.songlist li:nth-child(even)  { background-color: transparent; }
 ul.songlist .ng-scope:nth-child(2n+1) li.album {
-    background-color: #2b2929;
+    background-color: #2b2b2b;
 }
 ul.songlist li.playing {
     background-color: #161616;
