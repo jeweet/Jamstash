@@ -204,7 +204,6 @@ a.disabled:hover {
 }
 ul.simplelist li
 {
-    border-bottom: 1px solid #272727;
 }
 ul.simplelist li a
 {
@@ -217,12 +216,9 @@ ul.simplelist li:hover
 }
 ul.simplelist li.index
 {
-    border-bottom: 1px solid #171717;
-    color: #f2f2f2;
 }
 ul.simplelist li.index a
 {
-    color: #f2f2f2;
 }
 ul.simplelist li.selected
 {
@@ -231,10 +227,10 @@ ul.simplelist li.selected
 #BreadCrumb
 {
     color: #fff;
-    background: #222222;
 }
 #BreadCrumb a
 {
+    color: #fff;
 }
 #submenu_AZIndex
 {
@@ -255,7 +251,7 @@ ul.songlist th:hover, ul.songlist th.sorted {
 }
 ul.songlist li.album:hover
 {
-    background: #1d1d1d;
+    background: #272727;
 }
 ul.songlist li.albumgrid
 {
@@ -266,9 +262,9 @@ ul.songlist li.album
     color: #f2f2f2;
     border-bottom: 1px solid #272727;
 }
-ul.songlist li.album .albumart img
+ul.songlist li.albumgrid .albumart img
 {
-  /*  border: 1px solid #232323;*/
+    box-shadow: 3px 4px 1px #232323; 
 }
 ul.songlist .albumgrid .title
 {
@@ -277,9 +273,9 @@ ul.songlist .albumgrid .title
 ul.songlist li.row {
     border-bottom: 1px solid #232323;
 }
-ul.songlist li.row:hover
+ul.songlist li:hover
 {
-    background-color: #1d1d1d;
+    background-color: #272727!important;
 }
 ul.songlist li.row td
 {
@@ -293,12 +289,12 @@ ul.songlist li.row td.album a
 {
     color: #fff; /*color: #D6D469;*/
 }
-ul.songlist li.row td.album a:hover
+ul.songlist li td.album a:hover
 {
     color: #fff; /*color: #d6d469;*/
     text-decoration: underline;
 }
-ul.songlist li:nth-child(odd)   { background-color: #272727; }
+ul.songlist li:nth-child(odd)   { background-color: #2b2929; }
 ul.songlist li:nth-child(even)  { background-color: transparent; }
 ul.songlist li.playing {
     background-color: #161616;
@@ -467,7 +463,7 @@ select#SearchType {
 }
 select#SelectedAlbumSort {
     background: #323232;
-    color: #5b5b4e;
+    color: #fff;
 }
 ul.songlist li .itemactions a svg {
     fill: #ffffff;
@@ -481,6 +477,10 @@ ul.songlist .album a.favorite svg {
 ul.songlist li.playing
 {
     color: #ffffff;
+}
+.artistinfo 
+{
+    border: 1px solid #000000;
 }
 
 

@@ -5,6 +5,7 @@ done folder playlist function does not return playlist - supysonic bug
 done album artist large coverart above list / grid
 done local storage icon in player fucks layout
 done scrollbar is behind player
+done svg icons
 
 fix breadcrumbs - navigation & Artist - artist - artist bug and show page in main div
 fix show a start page
@@ -13,8 +14,8 @@ fix grid with mixed content
 fix ul.mainlist li.selected background-color for artists
 fix hide sidebar when artist is selected on mobile device
 fix queue error on adding multiple times the same song.
-
-fix svg icons in queue, song list, player controls and playlists.
+fix artist search
+fix credits with mdi and jamstash
 
 new login screen with user / pass & possible pre-defined server
 new redo settings screen - be responsive

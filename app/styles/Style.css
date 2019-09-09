@@ -226,7 +226,7 @@ background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
 .smcolumn
 {
     scrollbar-width: thin;
-    height: calc(100% - 105px);
+    height: calc(100% - 103px);
     overflow-y: auto;
     outline: none;
     width: 312px;
@@ -247,7 +247,7 @@ background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
 {
     position: relative;
     scrollbar-width: thin;
-    height: calc(100% - 105px);
+    height: calc(100% - 103px);
     outline: none;
     margin-left: 312px;
     margin-right: 350px;
@@ -331,7 +331,7 @@ background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
     border-bottom: 1px solid #cbcbcb;
     position: absolute;
     top: 40px;
-    bottom: 40px;
+    bottom: 62px;
     width: 100%;
 }
 .padder
@@ -745,7 +745,7 @@ ul.songlist .albumgrid .albumart img {
     width: 160px;
     height: 160px;
     max-height: 160px;
-    background: url(../images/albumdefault_160.jpg) no-repeat;
+    background: url(../images/empty.png) no-repeat;
     margin: 3px 0 0 18px;
     padding: 0px;
     box-shadow: 3px 4px 1px #eef4fa;
@@ -1236,6 +1236,7 @@ ul.songlist li:hover .itemactions
     background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,rgb(0, 0, 0) 100%);
     width: 100%;
     height: 120px;
+    margin-bottom: -20px;
     position: absolute;
     bottom: 0;
     z-index: -1;
@@ -1253,7 +1254,7 @@ ul.songlist li:hover .itemactions
     background: #747779;
     opacity: .8;
     z-index: 99;
-    height: 65px;
+    height: 62px!important;
 }
 #audiocontainer
 {
@@ -1261,7 +1262,7 @@ ul.songlist li:hover .itemactions
 .audiojs
 {
     width: auto;
-    height: 70px;
+    height: 50px;
     margin: 0 75px 0 0;
     background: none;
     font-family: inherit;
@@ -1362,7 +1363,7 @@ ul.songlist li:hover .itemactions
 #songdetails
 {
     width: 305px;
-    margin: 5px;
+    margin: 5px 5px 3px 5px;
     float: left;
     cursor: pointer;
     padding: 0;
@@ -1375,7 +1376,7 @@ ul.songlist li:hover .itemactions
    height: 30px;
    width: 170px;
    position: absolute;
-   bottom: 2px;
+   bottom: 0px;
    left: 185px;
    display: none;   
 }
@@ -1404,7 +1405,7 @@ ul.songlist li:hover .itemactions
 #songdetails ul
 {
 	list-style-type: none;
-	margin: 4px 0 2px 0;
+	margin: 0 0 2px 0;
 	padding: 0;
 	width: 245px;
 	overflow: hidden;
@@ -1904,7 +1905,7 @@ legend
 }
 .a_image {
    float: left;
-   background: #ffffff;
+   background: transparent;
    width: 170px;
    height: 120px;
    border-radius: 10px 0px 0px 10px;
@@ -1928,7 +1929,7 @@ legend
     float: right;
     position: relative;
     bottom: 50px;
-    right: 25px;
+    right: 10px;
 }
 #SideQueue ul.songlist {
     padding: 0px!important;
