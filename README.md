@@ -12,7 +12,6 @@ Imagine you can stream all your music from home, to any device, where ever you a
 What?
 
 * HTML5 Music Streaming App for your Subsonic server
-* Archive.org Browsing and Streaming of Live Music
 
 ## Features
 
