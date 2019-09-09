@@ -10,12 +10,8 @@
     float: right;
 }
 
-.list-item-remove:hover {
-    background-color: #DEECFB;
-}
-
 .list-item-remove:hover .icon-remove {
-    fill: #4D4D4F;
+    fill: red;
 }
 
 .icon-remove {

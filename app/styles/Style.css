@@ -226,7 +226,7 @@ background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
 .smcolumn
 {
     scrollbar-width: thin;
-    height: calc(100% - 120px);
+    height: calc(100% - 105px);
     overflow-y: auto;
     outline: none;
     width: 312px;
@@ -247,7 +247,7 @@ background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
 {
     position: relative;
     scrollbar-width: thin;
-    height: calc(100% - 120px);
+    height: calc(100% - 105px);
     outline: none;
     margin-left: 312px;
     margin-right: 350px;
@@ -304,7 +304,7 @@ background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
 {
     padding: 10px 4px 6px 4px;
     font-size: 12px;
-    color: #bbb;
+    color: #63aeff;
     font-variant: small-caps;
     font-weight: bold;
     text-align: center;
@@ -379,7 +379,7 @@ background: url('../images/subsonic-icon.png') no-repeat -6px -10px;
     font-size: 12px;
     position: absolute;
     z-index: 999;
-    bottom: 5px;
+    bottom: 17px;
     right: 5px;
 }
 #messages .message
@@ -468,7 +468,7 @@ ul.simplelist .item .itemactions
 {
     top: 0px;
     float: left;
-    margin: 0 5px;
+    margin: -3px 10px;
 }
 ul.simplelist .item .itemactions a
 {
@@ -559,39 +559,31 @@ ul.mainlist li.selected
     color: #f2f2f2;
     background-color: #528AC6;
 }
+ul.mainlist li.selected svg
+{
+    fill: #f2f2f2;
+}
 ul.mainlist li.item a.play
 {
-    width: 20px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     display: block;
-    background: url('../images/play_gl_6x8.png') no-repeat 6px center;
+    fill: #6d6d6d;
 }
 ul.mainlist li.item a.play:hover
 {
-    background: url('../images/play_6x8.png') no-repeat 6px center #DEECFB;
-}
-ul.mainlist li.item a.download
-{
-    float: left;
-    width: 20px;
-    height: 18px;
-    display: block;
-    background: url('../images/download_gl_9x12.png') no-repeat 5px center;
-}
-ul.mainlist li.item a.download:hover
-{
-    background: url('../images/download_gd_9x12.png') no-repeat 5px center #DEECFB;
+   fill: #adadad;
 }
 ul.mainlist li.item a.add
 {
-    width: 20px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     display: block;
-    background: url('../images/plus_gl_8x8.png') no-repeat 6px center;
+    fill: #6d6d6d;
 }
 ul.mainlist li.item a.add:hover
 {
-    background: url('../images/plus_8x8.png') no-repeat 6px center #DEECFB;
+   fill: #adadad;
 }
 ul.mainlist li.item .submenu a {
     color: #7EA8D5;
@@ -865,7 +857,7 @@ ul.songlist .row:hover .itemactions
 ul.songlist .row .itemactions_queue
 {
     float: left;
-    padding: 6px 10px 0 15px;
+    padding: 2px 10px 0 15px;
 }
 .queue .icon-wrap {
     fill: #6d6d6d;
@@ -977,7 +969,8 @@ ul.songlist li.album {
 }
 ul.songlist .ng-scope:nth-child(odd) li.album{ background-color:#f7f7f7; }
 ul.songlist .ng-scope:nth-child(even) li.album { background-color:transparent; }
-ul.songlist .ng-scope:nth-child(odd) li.albumgrid{ background-color:transparent!important; }
+
+ul.songlist .ng-scope:nth-child(odd) li.albumgrid{ background-color:transparent; }
 ul.songlist .ng-scope:nth-child(even) li.albumgrid { background-color:transparent; }
 
 ul.songlist li:hover
@@ -1043,7 +1036,7 @@ ul.songlist li:hover .itemactions
 #globalactions
 {
     position: relative;
-    margin: 20px 30px 0px 0px;
+    margin: 15px 30px 0px 0px;
     height: 30px;
     width: 30px;
     float: right;
@@ -1135,7 +1128,7 @@ ul.songlist li:hover .itemactions
 #SideQueue .row {
 	display: block;
 	margin: 0 0px;
-	padding: 4px;
+	padding: 8px 4px 4px 4px;
 	font-size: 12px;
 	text-align: left;
 	overflow: hidden;
@@ -1240,9 +1233,9 @@ ul.songlist li:hover .itemactions
     overflow: hidden;
 }
 #blurwrapper{
-    background: #fff;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,rgb(0, 0, 0) 100%);
     width: 100%;
-    height: 130px;
+    height: 120px;
     position: absolute;
     bottom: 0;
     z-index: -1;
@@ -1260,7 +1253,7 @@ ul.songlist li:hover .itemactions
     background: #747779;
     opacity: .8;
     z-index: 99;
-    height: 75px;
+    height: 65px;
 }
 #audiocontainer
 {
@@ -1284,7 +1277,7 @@ ul.songlist li:hover .itemactions
 .audiojs .scrubber
 {
     height: 5px;
-    margin: 32px 5px 0px 5px;
+    margin: 26px 5px 0px 5px;
     float: none;
     width: auto;
     position: relative;
@@ -1336,7 +1329,7 @@ ul.songlist li:hover .itemactions
 }
 .playeractions
 {
-    margin: 20px 10px 0px 20px;
+    margin: 15px 5px 0px 20px;
     width: 100px;
 }
 .playeractions svg
@@ -1354,13 +1347,13 @@ ul.songlist li:hover .itemactions
 #coverart img 
 {
     border-radius: 5px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 #coverart
 {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     overflow: hidden;
     margin: -2px 5px 0px 1px;
     float: left;
@@ -1368,7 +1361,7 @@ ul.songlist li:hover .itemactions
 }
 #songdetails
 {
-    width: 322px;
+    width: 305px;
     margin: 5px;
     float: left;
     cursor: pointer;
@@ -1382,8 +1375,8 @@ ul.songlist li:hover .itemactions
    height: 30px;
    width: 170px;
    position: absolute;
-   bottom: 10px;
-   left: 210px;
+   bottom: 2px;
+   left: 185px;
    display: none;   
 }
 .repeat {
@@ -1445,9 +1438,9 @@ ul.songlist li:hover .itemactions
 }
 #songdetails svg {
    fill: #aca4a4;
-   height: 17px;
-   width: 17px;
-   margin: 5px;
+   height: 15px;
+   width: 15px;
+   margin: 2px;
 }
 #songdetails a.rate
 {
@@ -1818,7 +1811,7 @@ select.folders
 {
     width: calc(100% - 47px);
     height: 30px;
-    margin: 10px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
     float: left;
 }
 .submit
@@ -1891,7 +1884,7 @@ legend
     fill: #6d6d6d;
 }
 #action_RefreshArtists {
-    margin: 10px 5px 0 0;
+    margin: 5px 5px 0 0;
     background: #fff;
     height: 22px;
     padding: 3px 7px;
@@ -1908,7 +1901,6 @@ legend
     border: 1px solid #f2f2f2;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 3px 4px 1px #eef4fa;
 }
 .a_image {
    float: left;

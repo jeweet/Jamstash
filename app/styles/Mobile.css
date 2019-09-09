@@ -21,15 +21,24 @@
         ul.songlist .row .itemactions {
                 display: initial;
         }
+        ul.songlist .albumgrid .itemactions {
+                display: none;
+        }
+        ul.songlist .albumgrid li:hover .itemactions {
+                display: initial;
+        }
 
 }
 @media only screen and (max-width: 840px) {
         .artistinfo {
                 width: calc(100% - 10px);
-                margin:5px 5px 5px 5px;
+                margin:10px 5px 5px 5px;
         }
         ul.songlist .album .itemactions {
                 right: 5px;
+        }
+        ul.songlist .album .albumart img {
+                margin: 3px 5px 0 0px;
         }
 	#search  {
         	visibility: hidden;
@@ -84,6 +93,7 @@
 	}
 	ul.songlist .albumgrid .itemactions {
 		width: 125px;
+                display: none;
 	}
 	ul.songlist .albumgrid .itemactions a {
 		background-position: center center;

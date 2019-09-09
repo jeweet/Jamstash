@@ -44,7 +44,7 @@
             <!-- Album -->
             <div id="right-component" class="lgcolumn" ng-class="{'lgcolumn_expanded' : !$rootScope.settings.ShowQueue}">
             <div class="artistinfo"> 
-                <div class="a_image"><img src="images/subsonic-logo.png" ng-src="{{selectedAlbumCoverArtURL}}"></div>
+                <div class="a_image"><img src="images/subsonic-icon.png" ng-src="{{selectedAlbumCoverArtURL}}"></div>
                 <div class="a_title">{{selectedArtist}}</div>
                 <div class="a_info"><a href="https://www.google.nl/search?q={{selectedArtist}}" title="Search for {{selectedArtist}} on Google"><img src="../images/google.jpg" height="20px" alt="Google" /></a></div>
             </div>
@@ -171,15 +171,31 @@
                     <li class="index" id="auto">Auto Playlists</li>
                     <li class="item" ng-click="getRandomStarredSongs('display')" ng-class="{'selected': selectedAutoPlaylist == 'starred'}">
                         <div class="itemactions">
-                            <a class="add" href="" ng-click="getRandomStarredSongs('add')" title="Add To Play Queue" stop-event="click"></a>
-                            <a class="play" href="" ng-click="getRandomStarredSongs('play')" title="Play" stop-event="click"></a>
+                            <a class="add" href="" ng-click="getRandomStarredSongs('add')" title="Add To Play Queue" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                </svg>
+                            </a>
+                            <a class="play" href="" ng-click="getRandomStarredSongs('play')" title="Play" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </svg>
+                            </a>
                         </div>
                         <div class="title">Starred</div>
                     </li>
                     <li class="item" ng-click="getRandomSongs('display')" ng-class="{'selected': selectedAutoPlaylist == 'random'}">
                         <div class="itemactions">
-                            <a class="add" href="" title="Add To Play Queue" ng-click="getRandomSongs('add')" stop-event="click"></a>
-                            <a class="play" href="" title="Play" ng-click="getRandomSongs('play')" stop-event="click"></a>
+                            <a class="add" href="" title="Add To Play Queue" ng-click="getRandomSongs('add')" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                </svg>
+                            </a>
+                            <a class="play" href="" title="Play" ng-click="getRandomSongs('play')" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </svg>                            
+                            </a>
                         </div>
                         <div class="title">Random</div>
                     </li>
@@ -206,14 +222,22 @@
                                 title="Add To Play Queue"
                                 ng-click="getRandomSongs('add', genrePlaylist)"
                                 stop-event="click"
-                            ></a>
+                            >
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                </svg>
+                           </a>
                             <a
                                 class="play"
                                 href=""
                                 title="Play"
                                 ng-click="getRandomSongs('play', genrePlaylist)"
                                 stop-event="click"
-                            ></a>
+                            >
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </svg>                            
+                            </a>
                         </div>
                         <span class="title">
                             {{ genrePlaylist }}
@@ -235,8 +259,16 @@
                     <li class="index" id="folder">Folder Playlists</li>
                     <li class="item" ng-repeat="o in MusicFolders" ng-click=" getRandomSongs('display', '' , o.id)" ng-class="{'selected': o.id == selectedAutoPlaylist}">
                         <div class="itemactions">
-                            <a class="add" href="" title="Add To Play Queue" ng-click="getRandomSongs('add', '', o.id)" stop-event="click"></a>
-                            <a class="play" href="" title="Play" ng-click="getRandomSongs('play', '', o.id)" stop-event="click"></a>
+                            <a class="add" href="" title="Add To Play Queue" ng-click="getRandomSongs('add', '', o.id)" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                </svg>
+                            </a>
+                            <a class="play" href="" title="Play" ng-click="getRandomSongs('play', '', o.id)" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </svg>
+                            </a>
                         </div>
                         <div class="title">{{o.name}}</div>
                     </li>
@@ -245,8 +277,16 @@
                     <li class="index" id="auto">My Playlists</li>
                     <li class="item" ng-repeat="o in playlists" ng-click="getPlaylist('display', o.id)" ng-class="{'selected': o.id == selectedPlaylist}">
                         <div class="itemactions">
-                            <a class="add" href="" title="Add To Play Queue" ng-click="getPlaylist('add', o.id)" stop-event="click"></a>
-                            <a class="play" href="" title="Play" ng-click="getPlaylist('play', o.id)" stop-event="click"></a>
+                            <a class="add" href="" title="Add To Play Queue" ng-click="getPlaylist('add', o.id)" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                </svg>
+                            </a>
+                            <a class="play" href="" title="Play" ng-click="getPlaylist('play', o.id)" stop-event="click">
+                                <svg viewBox="0 0 20 20">
+                                        <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </svg>                            
+                            </a>
                         </div>
                         <div class="title" title="{{'Songs: ' + o.songCount + ', Public: ' + o.public}}">{{o.name}}</div>
                     </li>
