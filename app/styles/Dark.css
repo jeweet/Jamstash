@@ -409,7 +409,7 @@ label
     border: 1px solid #1A1A1A;
 }
 #action_RefreshArtists svg {
-   fill: #939393;
+   fill: #63aeff;
 }
 #action_RefreshArtists:hover {
     color: #939393;

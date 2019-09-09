@@ -945,8 +945,14 @@ ul.songlist .row a.remove
 ul.songlist .row a.remove:hover
 {
 }
-ul.songlist li:nth-child(odd) { background-color:#f7f7f7; }
+ul.songlist li:nth-child(odd) { background-color:#f9f9f9; }
 ul.songlist li:nth-child(even) { background-color:transparent; }
+
+ul.songlist .ng-scope:nth-child(odd) li.album{ background-color:#f9f9f9; }
+ul.songlist .ng-scope:nth-child(even) li.album { background-color:transparent; }
+
+ul.songlist .ng-scope:nth-child(odd) li.albumgrid{ background-color:transparent; }
+ul.songlist .ng-scope:nth-child(even) li.albumgrid { background-color:transparent; }
 
 ul.songlist li.playing
 {
@@ -967,12 +973,6 @@ ul.songlist li.album {
     background-image: none;
     background-color: transparent
 }
-ul.songlist .ng-scope:nth-child(odd) li.album{ background-color:#f7f7f7; }
-ul.songlist .ng-scope:nth-child(even) li.album { background-color:transparent; }
-
-ul.songlist .ng-scope:nth-child(odd) li.albumgrid{ background-color:transparent; }
-ul.songlist .ng-scope:nth-child(even) li.albumgrid { background-color:transparent; }
-
 ul.songlist li:hover
 {
     background-color: #EEF4FA!important;
@@ -1814,6 +1814,9 @@ select.folders
     height: 30px;
     margin: 5px 5px 5px 5px;
     float: left;
+    font-variant: small-caps;
+    font-weight: 600;
+    color: #63aeff;
 }
 .submit
 {
@@ -1886,14 +1889,14 @@ legend
 }
 #action_RefreshArtists {
     margin: 5px 5px 0 0;
-    background: #fff;
     height: 22px;
+    background: #fff;
     padding: 3px 7px;
 }
 #action_RefreshArtists svg {
    height: 16px;
    width: 16px;
-   fill: #5b5b4e;
+   fill: #63aeff;
 }
 .artistinfo {
     width: calc(100% - 40px);
@@ -1903,6 +1906,10 @@ legend
     border-radius: 10px;
     overflow: hidden;
 }
+.rightcolumn div:not([id]), div[id=""] .artistinfo {
+    display: none;
+}
+
 .a_image {
    float: left;
    background: transparent;
