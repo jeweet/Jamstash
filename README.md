@@ -5,6 +5,8 @@ Jamstash - HTML5 Music Streamer
 
 Forked from https://github.com/tsquillario/Jamstash
 
+![alt text](https://raw.githubusercontent.com/jeweet/Jamstash/master/screenshot.png)
+
 Imagine you can stream all your music from home, to any device, where ever you are. That is Subsonic! Now imagine having a Web App to stream your music that is as beautiful and well designed as it is functional, that is Jamstash!
 
 What?
